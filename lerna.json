@@ -1,11 +1,9 @@
 {
+  "$schema": "node_modules/lerna/schemas/lerna-schema.json",
   "npmClient": "npm",
-  "packages": [
-    "packages/core",
-    "packages/web",
-    "packages/ssr"
-  ],
+  "packages": ["packages/*"],
   "version": "independent",
+  "useWorkspaces": true,
   "command": {
     "publish": {
       "conventionalCommits": true,
@@ -13,15 +11,6 @@
     },
     "version": {
       "conventionalCommits": true
-    },
-    "bootstrap": {
-      "hoist": [
-        "react",
-        "react-dom"
-      ],
-      "npmClientArgs": [
-        "--no-package-lock"
-      ]
     }
   }
 }
