@@ -21,9 +21,12 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "esModuleInterop": true,
+    "skipLibCheck": true,
     "baseUrl": "./",
+    "typeRoots": ["./node_modules/@types", "../../node_modules/@types"],
     "paths": {
-      "@react-keycloak-fork/core": ["../core"]
+      "@react-keycloak-fork/core": ["../core"],
+      "keycloak-js": ["../../node_modules/keycloak-js/lib/keycloak.d.ts"]
     }
   },
   "include": [

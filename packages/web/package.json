@@ -47,7 +47,7 @@
     "prepublishOnly": "npm run build && cp ../../LICENSE.md ."
   },
   "peerDependencies": {
-    "keycloak-js": ">=17.0.0",
+    "keycloak-js": ">=26.0.0",
     "react": ">=16.0",
     "react-dom": ">=16.0",
     "typescript": ">=3.8"
@@ -65,5 +65,8 @@
   "jest": {
     "preset": "ts-jest",
     "testEnvironment": "jsdom"
+  },
+  "devDependencies": {
+    "keycloak-js": "^26.2.0"
   }
 }
