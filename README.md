@@ -1,8 +1,10 @@
 ![React Keycloak](/art/react-keycloak-logo.png?raw=true 'React Keycloak Logo')
 
-# React Keycloak (Keycloak >=v17 Fork) <!-- omit in toc -->
+# React Keycloak (Keycloak >=v26 Fork) <!-- omit in toc -->
 
-> React bindings for [Keycloak](https://www.keycloak.org/). Fork of https://github.com/react-keycloak/react-keycloak.git with updated packages for keycloak >=17 support.
+> React bindings for [Keycloak](https://www.keycloak.org/). Fork of https://github.com/react-keycloak/react-keycloak.git with updated packages for keycloak >=26 support.
+
+⚠️ **IMPORTANT NOTICE**: This fork has been updated to support Keycloak 26, but it is **NOT MAINTAINED**. We strongly recommend migrating to [NextAuth.js](https://next-auth.js.org/) for new projects, as it provides better maintenance, security updates, and broader OAuth provider support.
 
 [![NPM (scoped)](https://img.shields.io/npm/v/@react-keycloak-fork/core?label=npm%20%7C%20core)](https://www.npmjs.com/package/@react-keycloak-fork/core)
 [![NPM (scoped)](https://img.shields.io/npm/v/@react-keycloak-fork/web?label=npm%20%7C%20web)](https://www.npmjs.com/package/@react-keycloak-fork/web)
@@ -39,7 +41,7 @@
 React Keycloak for Web requires:
 
 - React **16.0** or later
-- `keycloak-js` **17.0.0** or later
+- `keycloak-js` **26.0.0** or later
 
 ```shell
 yarn add @react-keycloak-fork/web
@@ -63,7 +65,7 @@ React Keycloak for SSR frameworks requires:
 - SSR Framework:
   - NextJS **9** or later
   - Razzle **3** or later
-- `keycloak-js` **17.0.0** or later
+- `keycloak-js` **26.0.0** or later
 
 ```shell
 yarn add @react-keycloak-fork/ssr
@@ -97,9 +99,10 @@ See `@react-keycloak-fork/native` package [README](https://github.com/react-keyc
 
 ## Support
 
-| version | keycloak-js version |
-| ------- | ------------------- |
-| v4.0.1+ | 17.0.0+             | (fork)
+| version | keycloak-js version | notes  |
+| ------- | ------------------- | ------ |
+| v4.0.3+ | 26.0.0+             | (fork) |
+| v4.0.1+ | 17.0.0+             | (fork) |
 | v2.0.0+ | 9.0.2+              |
 | v1.x    | >=8.0.2 <9.0.2      |
 
@@ -115,6 +118,28 @@ If you need to connect using a more generic OIDC client instead of `keycloak.js`
 - [thchia/react-oidc](https://github.com/thchia/react-oidc)
 - [@axa-fr/react-oidc](https://github.com/AxaGuilDEv/react-oidc)
 
+## Migration Notice
+
+⚠️ **This project is no longer maintained**. For new projects, we strongly recommend using [NextAuth.js](https://next-auth.js.org/) instead, which provides:
+
+- ✅ Active maintenance and security updates
+- ✅ Support for 50+ OAuth providers including Keycloak
+- ✅ Better TypeScript support
+- ✅ Modern React patterns and hooks
+- ✅ Comprehensive documentation and examples
+- ✅ Active community and support
+
+### Migrating to NextAuth.js
+
+To migrate from this library to NextAuth.js with Keycloak:
+
+1. Install NextAuth.js: `npm install next-auth`
+2. Configure Keycloak as a provider in your NextAuth configuration
+3. Replace `useKeycloak()` hooks with NextAuth's `useSession()` and `signIn()`/`signOut()` functions
+4. Update your authentication logic to use NextAuth's session management
+
+See the [NextAuth.js documentation](https://next-auth.js.org/configuration/providers/keycloak) for detailed migration instructions.
+
 ## Contributing
 
 See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the repository and the development workflow.
@@ -122,9 +147,3 @@ See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the 
 ## License
 
 MIT
-
----
-
-If you found this project to be helpful, please consider buying me a coffee.
-
-[![buy me a coffee](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://buymeacoff.ee/4f18nT0Nk)

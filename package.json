@@ -71,5 +71,14 @@
     "@react-keycloak-fork/core": "file:packages/core",
     "@react-keycloak-fork/ssr": "file:packages/ssr",
     "@react-keycloak-fork/web": "file:packages/web"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michael-connolly236/react-keycloak-fork.git"
+  },
+  "author": "michael-connolly236",
+  "bugs": {
+    "url": "https://github.com/michael-connolly236/react-keycloak-fork/issues"
+  },
+  "homepage": "https://github.com/michael-connolly236/react-keycloak-fork#readme"
 }
