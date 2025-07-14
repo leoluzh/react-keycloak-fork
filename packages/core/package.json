@@ -50,5 +50,6 @@
   "jest": {
     "preset": "ts-jest",
     "testEnvironment": "jsdom"
-  }
+  },
+  "gitHead": "0cd23235e898e822306c4f868c3e8dd10b45e41b"
 }
