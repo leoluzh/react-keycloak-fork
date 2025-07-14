@@ -1,6 +1,6 @@
 {
   "name": "@michael-connolly236/react-keycloak-fork-web",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "license": "MIT",
   "description": "Fork of https://github.com/react-keycloak/react-keycloak.git with updated packages for Keycloak >=17. React bindings for Keycloak javascript adapter.",
   "repository": {
