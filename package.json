@@ -68,9 +68,9 @@
     }
   },
   "dependencies": {
-    "@react-keycloak-fork/core": "file:packages/core",
-    "@react-keycloak-fork/ssr": "file:packages/ssr",
-    "@react-keycloak-fork/web": "file:packages/web"
+    "@michael-connolly236/react-keycloak-fork-core": "file:packages/core",
+    "@michael-connolly236/react-keycloak-fork-ssr": "file:packages/ssr",
+    "@michael-connolly236/react-keycloak-fork-web": "file:packages/web"
   },
   "repository": {
     "type": "git",

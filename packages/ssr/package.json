@@ -1,5 +1,5 @@
 {
-  "name": "@react-keycloak-fork/ssr",
+  "name": "@michael-connolly236/react-keycloak-fork-ssr",
   "version": "4.0.3",
   "license": "MIT",
   "description": "Fork of https://github.com/react-keycloak/react-keycloak.git with updated packages for Keycloak >=17. SSR bindings for Keycloak javascript adapter",
@@ -28,7 +28,7 @@
     "lib-commonjs"
   ],
   "publishConfig": {
-    "access": "public"
+    "registry": "https://npm.pkg.github.com"
   },
   "scripts": {
     "clean": "rimraf lib lib-commonjs",
@@ -55,7 +55,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.17.9",
-    "@react-keycloak-fork/core": "file:../core",
+    "@michael-connolly236/react-keycloak-fork-core": "file:../core",
     "detect-node": "^2.1.0",
     "hoist-non-react-statics": "^3.3.2",
     "js-base64": "^3.7.2",
