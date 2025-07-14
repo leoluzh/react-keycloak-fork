@@ -43,7 +43,6 @@
     "build": "run-s compile fixmaps",
     "test": "jest",
     "test:coverage": "jest --coverage",
-    "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "prepublishOnly": "npm run build && cp ../../LICENSE.md ."
   },
   "peerDependencies": {
