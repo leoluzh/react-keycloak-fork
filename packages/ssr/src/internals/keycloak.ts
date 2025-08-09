@@ -39,6 +39,12 @@ export const getKeycloakInstance = (
   const isServerCheck = isServer()
 
   if (recreate || (!keycloakInstance && !isServerCheck)) {
+    // If we are on the client, we want to create a Keycloak instance
+    // If we are on the server, we don't want to create a Keycloak instance 
+    // but rather return a stub instance
+    // that will be used to initialize Keycloak on the client.
+    //FIXED: using new Keycloak() directly instead of Keycloak.default()
+    // to avoid issues with the Keycloak library not being a default export.
     keycloakInstance = new Keycloak(keycloakConfig)
   }
 
