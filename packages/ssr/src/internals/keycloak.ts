@@ -1,6 +1,6 @@
 import type { AuthClient } from '@react-keycloak-refork/core'
 import type { KeycloakConfig } from 'keycloak-js'
-
+import Keycloak from 'keycloak-js'  // Add explicit import
 import type { TokenPersistor } from '../persistors/types'
 import type { SSRAuthClient } from '../types'
 
@@ -29,7 +29,7 @@ export const getKeycloakStub = (persistor: TokenPersistor): AuthClient => {
   return keycloakStubInstance
 }
 
-const Keycloak = !isServer() ? require('keycloak-js').default : null
+const KeycloakClient = !isServer() ? Keycloak : null
 
 export const getKeycloakInstance = (
   keycloakConfig: KeycloakConfig,
@@ -39,7 +39,10 @@ export const getKeycloakInstance = (
   const isServerCheck = isServer()
 
   if (recreate || (!keycloakInstance && !isServerCheck)) {
-    keycloakInstance = Keycloak(keycloakConfig)
+    if (!KeycloakClient) {
+      throw new Error('Keycloak client is not available on server side')
+    }    
+    keycloakInstance = new KeycloakClient(keycloakConfig)
   }
 
   return !isServerCheck ? keycloakInstance : getKeycloakStub(persistor!)
