@@ -101,6 +101,7 @@ See `@react-keycloak-refork/native` package [README](https://github.com/react-ke
 
 | version | keycloak-js version | notes  |
 | ------- | ------------------- | ------ |
+| v6.0.0+ | 26.0.0+             | (fork) |
 | v4.0.3+ | 26.0.0+             | (fork) |
 | v4.0.1+ | 17.0.0+             | (fork) |
 | v2.0.0+ | 9.0.2+              |
