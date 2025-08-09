@@ -29,7 +29,7 @@ export const getKeycloakStub = (persistor: TokenPersistor): AuthClient => {
   return keycloakStubInstance
 }
 
-const Keycloak = !isServer() ? require('keycloak-js') : null
+const Keycloak = !isServer() ? require('keycloak-js').default : null
 
 export const getKeycloakInstance = (
   keycloakConfig: KeycloakConfig,
