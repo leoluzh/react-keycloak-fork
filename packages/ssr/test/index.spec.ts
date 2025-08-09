@@ -1,3 +1,3 @@
-describe('@react-keycloak-fork/ssr', () => {
+describe('@react-keycloak-refork/ssr', () => {
   it.todo('implement tests')
 })

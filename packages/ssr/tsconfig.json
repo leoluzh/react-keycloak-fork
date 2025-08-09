@@ -25,7 +25,7 @@
     "baseUrl": "./",
     "typeRoots": ["./node_modules/@types", "../../node_modules/@types"],
     "paths": {
-      "@react-keycloak-fork/core": ["../core"],
+      "@react-keycloak-refork/core": ["../core"],
       "keycloak-js": ["../../node_modules/keycloak-js/lib/keycloak.d.ts"]
     }
   },

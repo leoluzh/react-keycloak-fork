@@ -1,4 +1,4 @@
-import type { AuthClient } from '@react-keycloak-fork/core'
+import type { AuthClient } from '@react-keycloak-refork/core'
 import type { KeycloakInstance } from 'keycloak-js'
 
 export interface SSRAuthClient

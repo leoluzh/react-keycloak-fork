@@ -1,4 +1,4 @@
-import type { AuthClientTokens } from '@react-keycloak-fork/core'
+import type { AuthClientTokens } from '@react-keycloak-refork/core'
 
 /**
  * TokenPersistor

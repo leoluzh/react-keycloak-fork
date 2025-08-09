@@ -1,5 +1,5 @@
-import { createAuthContext } from '@react-keycloak-fork/core'
-import type { AuthClient } from '@react-keycloak-fork/core'
+import { createAuthContext } from '@react-keycloak-refork/core'
+import type { AuthClient } from '@react-keycloak-refork/core'
 
 import { isServer } from './utils'
 
