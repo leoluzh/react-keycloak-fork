@@ -2,7 +2,7 @@
   "$schema": "node_modules/lerna/schemas/lerna-schema.json",
   "npmClient": "npm",
   "packages": ["packages/*"],
-  "version": "6.0.2",
+  "version": "6.0.3",
   "useWorkspaces": true,
   "command": {
     "publish": {
