@@ -1,6 +1,6 @@
 {
   "name": "@leoluzh/react-keycloak-fork-web",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "license": "MIT",
   "description": "Fork of https://github.com/react-keycloak/react-keycloak.git with updated packages for Keycloak >=19. React bindings for Keycloak javascript adapter.",
   "repository": {
@@ -54,7 +54,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.28.6",
-    "@leoluzh/react-keycloak-fork-core": "file:../core",
+    "@leoluzh/react-keycloak-fork-core": "3.0.1",
     "hoist-non-react-statics": "^3.3.2"
   },
   "jest": {
@@ -66,5 +66,6 @@
   },
   "devDependencies": {
     "keycloak-js": "^26.2.3"
-  }
+  },
+  "gitHead": "714c0844ff73c867c3a03cdb09ba4b744f98eb8d"
 }
