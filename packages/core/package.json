@@ -1,8 +1,8 @@
 {
   "name": "@leoluzh/react-keycloak-fork-core",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "license": "MIT",
-  "description": "Fork of https://github.com/react-keycloak/react-keycloak.git with updated packages for Keycloak >=17. React bindings for Keycloak javascript adapter (core)",
+  "description": "Fork of https://github.com/react-keycloak/react-keycloak.git with updated packages for Keycloak >=19. React bindings for Keycloak javascript adapter (core)",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/leoluzh/react-keycloak-fork.git"
@@ -42,7 +42,7 @@
     "prepublishOnly": "npm run build && cp ../../README.md . && cp ../../LICENSE.md ."
   },
   "peerDependencies": {
-    "react": ">=16"
+    "react": ">=19"
   },
   "dependencies": {
     "react-fast-compare": "^3.2.2"

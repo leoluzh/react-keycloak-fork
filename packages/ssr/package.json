@@ -1,8 +1,8 @@
 {
   "name": "@leoluzh/react-keycloak-fork-ssr",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "license": "MIT",
-  "description": "Fork of https://github.com/react-keycloak/react-keycloak.git with updated packages for Keycloak >=17. SSR bindings for Keycloak javascript adapter",
+  "description": "Fork of https://github.com/react-keycloak/react-keycloak.git with updated packages for Keycloak >=19. SSR bindings for Keycloak javascript adapter",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/leoluzh/react-keycloak-fork.git"
@@ -45,7 +45,7 @@
   },
   "peerDependencies": {
     "keycloak-js": ">=26.0.0",
-    "react": ">=16.0",
+    "react": ">=19.0",
     "typescript": ">=3.8"
   },
   "peerDependenciesMeta": {
