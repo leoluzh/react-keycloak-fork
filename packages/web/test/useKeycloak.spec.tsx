@@ -1,4 +1,4 @@
-import React, { JSXElementConstructor, ReactElement } from 'react'
+import { JSXElementConstructor, ReactElement } from 'react'
 import { renderHook } from '@testing-library/react'
 
 import { createKeycloakStub } from './test-utils'
@@ -7,15 +7,17 @@ import { useKeycloak, ReactKeycloakProvider } from '../src'
 
 afterEach(require('@testing-library/react').cleanup)
 
-const createHookWrapper = () => ({
-  children,
-}: {
-  children: ReactElement<any, string | JSXElementConstructor<any>>
-}) => (
-  <ReactKeycloakProvider authClient={createKeycloakStub()}>
-    {children}
-  </ReactKeycloakProvider>
-)
+const createHookWrapper =
+  () =>
+  ({
+    children,
+  }: {
+    children: ReactElement<any, string | JSXElementConstructor<any>>
+  }) => (
+    <ReactKeycloakProvider authClient={createKeycloakStub() as any}>
+      {children}
+    </ReactKeycloakProvider>
+  )
 
 describe('useKeycloak hook', () => {
   it('should return Keycloak (as object)', () => {

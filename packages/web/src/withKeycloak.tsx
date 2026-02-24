@@ -15,7 +15,7 @@ type InjectedProps = {
  * @deprecated Please migrate to useKeycloak hook where/when possible.
  */
 export function withKeycloak<P extends InjectedProps>(
-  Component: React.ComponentType<P>
+  Component: React.ComponentType<P>,
 ): React.FC<Subtract<P, InjectedProps>> {
   return function WrappedComponent(props: P) {
     const { keycloak, initialized } = useKeycloak()

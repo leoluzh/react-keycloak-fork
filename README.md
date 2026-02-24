@@ -40,7 +40,7 @@
 
 React Keycloak for Web requires:
 
-- React **16.0** or later
+- React **19.0** or later
 - `keycloak-js` **26.0.0** or later
 
 ```shell
@@ -61,7 +61,7 @@ See `@react-keycloak-fork/web` package [README](https://github.com/react-keycloa
 
 React Keycloak for SSR frameworks requires:
 
-- React **16.0** or later
+- React **19.0** or later
 - SSR Framework:
   - NextJS **9** or later
   - Razzle **3** or later

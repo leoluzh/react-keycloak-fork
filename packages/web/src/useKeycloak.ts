@@ -7,7 +7,7 @@ export function useKeycloak() {
 
   if (!ctx) {
     throw new Error(
-      'useKeycloak hook must be used inside ReactKeycloakProvider context'
+      'useKeycloak hook must be used inside ReactKeycloakProvider context',
     )
   }
 

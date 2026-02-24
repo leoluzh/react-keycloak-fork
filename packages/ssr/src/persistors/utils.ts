@@ -7,7 +7,7 @@ export function setCookie(name: string, val: string) {
   return Cookie.set(name, val)
 }
 
-export function getCookie(name: string, cookies = {}) {
+export function getCookie(name: string, cookies: Record<string, string> = {}) {
   return isServer() ? cookies[name] : Cookie.get(name)
 }
 

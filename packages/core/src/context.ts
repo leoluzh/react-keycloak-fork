@@ -25,7 +25,7 @@ export type IAuthContextProps<T extends AuthClient> = {
  * @returns {React.Context} the ReactKeycloak context.
  */
 export function createAuthContext<T extends AuthClient>(
-  initialContext?: Partial<IAuthContextProps<T>>
+  initialContext?: Partial<IAuthContextProps<T>>,
 ): React.Context<IAuthContextProps<T>> {
   return createContext({
     initialized: false,

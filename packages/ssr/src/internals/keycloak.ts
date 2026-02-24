@@ -29,17 +29,18 @@ export const getKeycloakStub = (persistor: TokenPersistor): AuthClient => {
   return keycloakStubInstance
 }
 
-const Keycloak = !isServer() ? require('keycloak-js').default : null
+const KeycloakModule = !isServer() ? require('keycloak-js') : null
+const Keycloak = KeycloakModule?.default ?? KeycloakModule
 
 export const getKeycloakInstance = (
   keycloakConfig: KeycloakConfig,
   persistor?: TokenPersistor,
-  recreate = false
+  recreate = false,
 ) => {
   const isServerCheck = isServer()
 
   if (recreate || (!keycloakInstance && !isServerCheck)) {
-    keycloakInstance = Keycloak(keycloakConfig)
+    keycloakInstance = new Keycloak(keycloakConfig)
   }
 
   return !isServerCheck ? keycloakInstance : getKeycloakStub(persistor!)

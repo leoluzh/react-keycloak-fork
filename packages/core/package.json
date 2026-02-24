@@ -1,17 +1,17 @@
 {
-  "name": "@michael-connolly236/react-keycloak-fork-core",
+  "name": "@leoluzh/react-keycloak-fork-core",
   "version": "2.0.0",
   "license": "MIT",
   "description": "Fork of https://github.com/react-keycloak/react-keycloak.git with updated packages for Keycloak >=17. React bindings for Keycloak javascript adapter (core)",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/michael-connolly236/react-keycloak-fork.git"
+    "url": "git+https://github.com/leoluzh/react-keycloak-fork.git"
   },
-  "author": "michael-connolly236",
+  "author": "leoluzh",
   "bugs": {
-    "url": "https://github.com/michael-connolly236/react-keycloak-fork/issues"
+    "url": "https://github.com/leoluzh/react-keycloak-fork/issues"
   },
-  "homepage": "https://github.com/michael-connolly236/react-keycloak-fork#readme",
+  "homepage": "https://github.com/leoluzh/react-keycloak-fork#readme",
   "keywords": [
     "react",
     "keycloak",
@@ -45,11 +45,12 @@
     "react": ">=16"
   },
   "dependencies": {
-    "react-fast-compare": "^3.2.0"
+    "react-fast-compare": "^3.2.2"
   },
   "jest": {
     "preset": "ts-jest",
-    "testEnvironment": "jsdom"
+    "testEnvironment": "jsdom",
+    "setupFilesAfterEnv": ["<rootDir>/test/test-utils.tsx"]
   },
   "gitHead": "0cd23235e898e822306c4f868c3e8dd10b45e41b"
 }

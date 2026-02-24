@@ -12,7 +12,7 @@ export type useKeycloakHookResults<T extends SSRAuthClient> = {
 }
 
 export function useKeycloak<
-  T extends SSRAuthClient = SSRAuthClient
+  T extends SSRAuthClient = SSRAuthClient,
 >(): useKeycloakHookResults<T> {
   const { initialized, authClient } = useContext(reactKeycloakSsrContext)
   const initializedVar = initialized || isServer()

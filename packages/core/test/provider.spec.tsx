@@ -1,6 +1,6 @@
 import * as React from 'react'
 import * as rtl from '@testing-library/react'
-import '@testing-library/jest-dom/extend-expect'
+import '@testing-library/jest-dom'
 
 import { createKeycloakStub, createChild, flushPromises } from './test-utils'
 
@@ -29,7 +29,7 @@ describe('AuthProvider', () => {
       rtl.render(
         <AuthProvider authClient={keycloakStub}>
           <div />
-        </AuthProvider>
+        </AuthProvider>,
       )
 
       expect(keycloakInitSpy).toHaveBeenCalledTimes(1)
@@ -55,7 +55,7 @@ describe('AuthProvider', () => {
       rtl.render(
         <AuthProvider authClient={keycloakStub} onEvent={eventListener}>
           <div />
-        </AuthProvider>
+        </AuthProvider>,
       )
 
       await flushPromises()
@@ -82,7 +82,7 @@ describe('AuthProvider', () => {
       rtl.render(
         <AuthProvider authClient={keycloakStub}>
           <div />
-        </AuthProvider>
+        </AuthProvider>,
       )
 
       expect(keycloakStub.onReady).toBeDefined()
@@ -107,12 +107,12 @@ describe('AuthProvider', () => {
           }
         >
           <div />
-        </AuthProvider>
+        </AuthProvider>,
       )
 
       expect(tester.getByTestId('LoadingComponent')).toBeVisible()
       expect(tester.getByTestId('LoadingComponent')).toHaveTextContent(
-        'Loading...'
+        'Loading...',
       )
     })
   })
@@ -292,11 +292,11 @@ describe('AuthProvider', () => {
     const tester = rtl.render(
       <AuthProvider authClient={keycloakStub}>
         <Child />
-      </AuthProvider>
+      </AuthProvider>,
     )
 
     expect(tester.getByTestId('keycloak')).toHaveTextContent(
-      'authClient: present'
+      'authClient: present',
     )
   })
 
@@ -310,7 +310,7 @@ describe('AuthProvider', () => {
       rtl.render(
         <AuthProvider authClient={keycloakStub} onEvent={onEventListener}>
           <div />
-        </AuthProvider>
+        </AuthProvider>,
       )
 
       rtl.act(() => {
@@ -330,7 +330,7 @@ describe('AuthProvider', () => {
       rtl.render(
         <AuthProvider authClient={keycloakStub} onEvent={onEventListener}>
           <div />
-        </AuthProvider>
+        </AuthProvider>,
       )
 
       rtl.act(() => {
@@ -350,7 +350,7 @@ describe('AuthProvider', () => {
       rtl.render(
         <AuthProvider authClient={keycloakStub} onEvent={onEventListener}>
           <div />
-        </AuthProvider>
+        </AuthProvider>,
       )
 
       const stubKeycloakError = {
@@ -365,7 +365,7 @@ describe('AuthProvider', () => {
       expect(onEventListener).toHaveBeenCalledTimes(1)
       expect(onEventListener).toHaveBeenCalledWith(
         'onAuthError',
-        stubKeycloakError
+        stubKeycloakError,
       )
     })
 
@@ -378,7 +378,7 @@ describe('AuthProvider', () => {
       rtl.render(
         <AuthProvider authClient={keycloakStub} onEvent={onEventListener}>
           <div />
-        </AuthProvider>
+        </AuthProvider>,
       )
 
       rtl.act(() => {
@@ -398,7 +398,7 @@ describe('AuthProvider', () => {
       rtl.render(
         <AuthProvider authClient={keycloakStub} onEvent={onEventListener}>
           <div />
-        </AuthProvider>
+        </AuthProvider>,
       )
 
       rtl.act(() => {
@@ -408,7 +408,7 @@ describe('AuthProvider', () => {
       expect(onEventListener).toHaveBeenCalledTimes(1)
       expect(onEventListener).toHaveBeenCalledWith(
         'onAuthRefreshError',
-        undefined
+        undefined,
       )
     })
 
@@ -421,7 +421,7 @@ describe('AuthProvider', () => {
       rtl.render(
         <AuthProvider authClient={keycloakStub} onEvent={onEventListener}>
           <div />
-        </AuthProvider>
+        </AuthProvider>,
       )
 
       rtl.act(() => {
@@ -443,7 +443,7 @@ describe('AuthProvider', () => {
       rtl.render(
         <AuthProvider authClient={keycloakStub}>
           <div />
-        </AuthProvider>
+        </AuthProvider>,
       )
 
       rtl.act(() => {
@@ -465,7 +465,7 @@ describe('AuthProvider', () => {
       rtl.render(
         <AuthProvider authClient={keycloakStub} autoRefreshToken={false}>
           <div />
-        </AuthProvider>
+        </AuthProvider>,
       )
 
       rtl.act(() => {
@@ -485,7 +485,7 @@ describe('AuthProvider', () => {
       rtl.render(
         <AuthProvider authClient={keycloakStub} onTokens={onTokensListener}>
           <div />
-        </AuthProvider>
+        </AuthProvider>,
       )
 
       rtl.act(() => {
@@ -513,7 +513,7 @@ describe('AuthProvider', () => {
       rtl.render(
         <AuthProvider authClient={keycloakStub} onEvent={onEventListener}>
           <div />
-        </AuthProvider>
+        </AuthProvider>,
       )
 
       rtl.act(() => {
@@ -535,7 +535,7 @@ describe('AuthProvider', () => {
       rtl.render(
         <AuthProvider authClient={keycloakStub} onEvent={onEventListener}>
           <div />
-        </AuthProvider>
+        </AuthProvider>,
       )
 
       rtl.act(() => {
@@ -580,7 +580,7 @@ describe('AuthProvider', () => {
       rtl.render(
         <AuthProvider authClient={keycloakStub} isLoadingCheck={isLoadingCheck}>
           <div />
-        </AuthProvider>
+        </AuthProvider>,
       )
 
       rtl.act(() => {
@@ -606,7 +606,7 @@ describe('AuthProvider', () => {
           }
         >
           <div />
-        </AuthProvider>
+        </AuthProvider>,
       )
 
       rtl.act(() => {
@@ -618,7 +618,7 @@ describe('AuthProvider', () => {
 
       expect(tester.getByTestId('LoadingComponent')).toBeVisible()
       expect(tester.getByTestId('LoadingComponent')).toHaveTextContent(
-        'Loading...'
+        'Loading...',
       )
     })
 
@@ -637,7 +637,7 @@ describe('AuthProvider', () => {
           isLoadingCheck={isLoadingCheck}
         >
           <div />
-        </AuthProvider>
+        </AuthProvider>,
       )
 
       rtl.act(() => {

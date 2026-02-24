@@ -1,17 +1,17 @@
 {
-  "name": "@michael-connolly236/react-keycloak-fork-web",
+  "name": "@leoluzh/react-keycloak-fork-web",
   "version": "2.0.0",
   "license": "MIT",
   "description": "Fork of https://github.com/react-keycloak/react-keycloak.git with updated packages for Keycloak >=17. React bindings for Keycloak javascript adapter.",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/michael-connolly236/react-keycloak-fork.git"
+    "url": "git+https://github.com/leoluzh/react-keycloak-fork.git"
   },
-  "author": "michael-connolly236",
+  "author": "leoluzh",
   "bugs": {
-    "url": "https://github.com/michael-connolly236/react-keycloak-fork/issues"
+    "url": "https://github.com/leoluzh/react-keycloak-fork/issues"
   },
-  "homepage": "https://github.com/michael-connolly236/react-keycloak-fork#readme",
+  "homepage": "https://github.com/leoluzh/react-keycloak-fork#readme",
   "keywords": [
     "react",
     "keycloak",
@@ -53,15 +53,18 @@
     }
   },
   "dependencies": {
-    "@babel/runtime": "^7.17.9",
-    "@michael-connolly236/react-keycloak-fork-core": "file:../core",
+    "@babel/runtime": "^7.28.6",
+    "@leoluzh/react-keycloak-fork-core": "file:../core",
     "hoist-non-react-statics": "^3.3.2"
   },
   "jest": {
     "preset": "ts-jest",
-    "testEnvironment": "jsdom"
+    "testEnvironment": "jsdom",
+    "moduleNameMapper": {
+      "@react-keycloak-fork/core": "<rootDir>/../core/src"
+    }
   },
   "devDependencies": {
-    "keycloak-js": "^26.2.0"
+    "keycloak-js": "^26.2.3"
   }
 }

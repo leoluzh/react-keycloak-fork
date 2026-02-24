@@ -1,6 +1,6 @@
 import { createAuthContext } from '@react-keycloak-fork/core'
-import type { KeycloakInstance } from 'keycloak-js'
+import Keycloak from 'keycloak-js'
 
-export const reactKeycloakWebContext = createAuthContext<KeycloakInstance>()
+export const reactKeycloakWebContext = createAuthContext<Keycloak>()
 
 export const ReactKeycloakWebContextConsumer = reactKeycloakWebContext.Consumer

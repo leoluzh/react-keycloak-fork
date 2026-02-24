@@ -2,6 +2,7 @@
 /**
  * @jest-environment jsdom
  */
+import '@testing-library/jest-dom'
 import * as React from 'react'
 import { setImmediate } from 'timers'
 import { IAuthContextProps } from '../src/context'
@@ -13,7 +14,7 @@ export const createKeycloakStub = (): AuthClient => ({
 })
 
 export const createChild = (
-  ReactKeycloakContext: React.Context<IAuthContextProps<AuthClient>>
+  ReactKeycloakContext: React.Context<IAuthContextProps<AuthClient>>,
 ) => {
   class Child extends React.Component {
     render() {

@@ -17,9 +17,9 @@ type InjectedProps<ACT> = {
  */
 export function withKeycloak<
   P extends InjectedProps<ACT>,
-  ACT extends SSRAuthClient = SSRAuthClient
+  ACT extends SSRAuthClient = SSRAuthClient,
 >(
-  Component: React.ComponentType<P>
+  Component: React.ComponentType<P>,
 ): React.FC<Subtract<P, InjectedProps<ACT>>> {
   return function WrappedComponent(props: P) {
     const { keycloak, initialized } = useKeycloak()

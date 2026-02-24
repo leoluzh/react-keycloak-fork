@@ -6,7 +6,7 @@ import type {
   AuthClientError,
   AuthClientTokens,
 } from '@react-keycloak-fork/core'
-import type { KeycloakConfig, KeycloakInstance } from 'keycloak-js'
+import Keycloak, { type KeycloakConfig } from 'keycloak-js'
 import * as React from 'react'
 
 import type { TokenPersistor } from './persistors/types'
@@ -16,8 +16,10 @@ import { KeycloakProvider } from './internals/KeycloakProvider'
 
 import type { SSRAuthClient } from './types'
 
-export interface SSRKeycloakProviderProps<T extends SSRAuthClient>
-  extends Omit<AuthProviderProps<T>, 'authClient'> {
+export interface SSRKeycloakProviderProps<T extends SSRAuthClient> extends Omit<
+  AuthProviderProps<T>,
+  'authClient'
+> {
   persistor: TokenPersistor
 
   keycloakConfig: KeycloakConfig
@@ -50,7 +52,7 @@ export class SSRKeycloakProvider extends React.PureComponent<
 
   onEvent = (event: AuthClientEvent, error?: AuthClientError) => {
     if (event === 'onReady') {
-      if (!(this.state.keycloak as KeycloakInstance).authenticated) {
+      if (!(this.state.keycloak as Keycloak).authenticated) {
         this.props?.persistor?.resetTokens()
       }
     }

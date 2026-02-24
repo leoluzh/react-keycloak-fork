@@ -23,7 +23,11 @@ export type AuthProviderProps<T extends AuthClient> = {
   /**
    * The single AuthClient instance to be used by your application.
    */
-  children: React.JSXElementConstructor<{children: React.ReactElement | ReactNode | Element }> | any
+  children:
+    | React.JSXElementConstructor<{
+        children: React.ReactElement | ReactNode | Element
+      }>
+    | any
 
   /**
    * A flag to enable automatic token refresh. Defaults to true.
@@ -51,7 +55,7 @@ export type AuthProviderProps<T extends AuthClient> = {
   /**
    * An optional component to display while AuthClient instance is being initialized.
    */
-  LoadingComponent?: JSX.Element
+  LoadingComponent?: React.JSX.Element
 
   /**
    * An optional function to receive AuthClient events as they happen.
@@ -83,7 +87,7 @@ type AuthProviderState = {
  * @returns the AuthProvider component
  */
 export function createAuthProvider<T extends AuthClient>(
-  AuthContext: React.Context<IAuthContextProps<T>>
+  AuthContext: React.Context<IAuthContextProps<T>>,
 ) {
   const defaultInitOptions: AuthClientInitOptions = {
     onLoad: 'check-sso',
