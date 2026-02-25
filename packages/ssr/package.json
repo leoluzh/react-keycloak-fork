@@ -28,7 +28,8 @@
     "lib-commonjs"
   ],
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   },
   "scripts": {
     "clean": "rimraf lib lib-commonjs",
@@ -68,5 +69,5 @@
   "devDependencies": {
     "keycloak-js": "^26.2.3"
   },
-  "gitHead": "a160137be4a18b5216d9714b792199e997e0da27"
+  "gitHead": "3acabbc63e25b61ed09b5849734f51998b16f4e6"
 }
