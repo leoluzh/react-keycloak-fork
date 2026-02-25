@@ -56,7 +56,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.28.6",
-    "@react-keycloak-fork/core": "8.0.0",
+    "@react-keycloak-refork/core": "8.0.1",
     "detect-node": "^2.1.0",
     "hoist-non-react-statics": "^3.3.2",
     "js-base64": "^3.7.8",
