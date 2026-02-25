@@ -1,6 +1,6 @@
 {
   "name": "@react-keycloak-refork/ssr",
-  "version": "8.0.1",
+  "version": "8.0.2",
   "license": "MIT",
   "description": "Fork of https://github.com/react-keycloak/react-keycloak.git with updated packages for Keycloak >=19. SSR bindings for Keycloak javascript adapter",
   "repository": {
@@ -56,7 +56,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.28.6",
-    "@react-keycloak-refork/core": "8.0.1",
+    "@react-keycloak-refork/core": "^8.0.2",
     "detect-node": "^2.1.0",
     "hoist-non-react-statics": "^3.3.2",
     "js-base64": "^3.7.8",
