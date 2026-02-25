@@ -55,7 +55,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.28.6",
-    "@leoluzh/react-keycloak-fork-core": "3.0.5",
+    "@react-keycloak-fork/core": "8.0.0",
     "hoist-non-react-statics": "^3.3.2"
   },
   "jest": {
