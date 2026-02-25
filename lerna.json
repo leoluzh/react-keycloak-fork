@@ -1,8 +1,10 @@
 {
   "$schema": "node_modules/lerna/schemas/lerna-schema.json",
   "npmClient": "npm",
-  "packages": ["packages/*"],
-  "version": "8.0.0",
+  "packages": [
+    "packages/*"
+  ],
+  "version": "8.0.1",
   "command": {
     "publish": {
       "conventionalCommits": true,

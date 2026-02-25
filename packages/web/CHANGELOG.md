@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.0.1](https://github.com/leoluzh/react-keycloak-fork/compare/v8.0.0...v8.0.1) (2026-02-25)
+
+**Note:** Version bump only for package @react-keycloak-refork/web
+
+
+
+
+
 # 8.0.0 (2026-02-25)
 
 
