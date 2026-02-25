@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.5](https://github.com/leoluzh/react-keycloak-fork/compare/@leoluzh/react-keycloak-fork-core@3.0.4...@leoluzh/react-keycloak-fork-core@3.0.5) (2026-02-25)
+
+**Note:** Version bump only for package @leoluzh/react-keycloak-fork-core
+
+
+
+
+
 ## [3.0.4](https://github.com/leoluzh/react-keycloak-fork/compare/@leoluzh/react-keycloak-fork-core@3.0.3...@leoluzh/react-keycloak-fork-core@3.0.4) (2026-02-25)
 
 **Note:** Version bump only for package @leoluzh/react-keycloak-fork-core
